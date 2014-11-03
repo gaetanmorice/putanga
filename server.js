@@ -4,4 +4,4 @@ var version = "1.0.0";
 
 http.createServer(function(request, response){
 	response.end(version);
-}).listen(8888);
+}).listen(80);
