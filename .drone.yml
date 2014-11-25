@@ -1,0 +1,6 @@
+image: ubuntu:14.04
+git:
+  path: github.com/gaetanmorice/putanga
+script:
+  - echo "Hello World"
+
