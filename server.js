@@ -1,7 +1,7 @@
 var http = require('http');
 
-var version = "2.0.0";
+var message = process.env.MESSAGE || "Putanga!";
 
 http.createServer(function(request, response){
-	response.end(version);
+	response.end(message);
 }).listen(80);
