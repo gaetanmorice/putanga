@@ -4,6 +4,8 @@ env:
   - AWS_ACCESS_KEY_ID={{AWSAccessKey}}
   - AWS_SECRET_ACCESS_KEY={{AWSSecretKey}}
 script:
+  - echo {{AWSAccessKey}}
+  - echo {{AWSSecretKey}}
   - docker build -t putanga .
   - docker save putanga > /tmp/putanga.tar
   - docker rmi putanga
