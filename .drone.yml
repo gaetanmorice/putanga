@@ -7,6 +7,6 @@ script:
   - docker build -t putanga .
   - docker save putanga > /tmp/putanga.tar
   - docker rmi putanga
-  - aws s3 cp /tmp/putanga.tar s3://kukume-cf/
+  - aws s3 cp /tmp/putanga.tar s3://kukume-cf/integration/
   - rm /tmp/putanga.tar
 
