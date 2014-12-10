@@ -1,0 +1,5 @@
+image: dock
+env:
+  - DOCKER_HOST=tcp://ec2-54-154-26-19.eu-west-1.compute.amazonaws.com:2375
+script:
+  - docker build -t putanga .
