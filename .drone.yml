@@ -3,3 +3,14 @@ env:
   - DOCKER_HOST=tcp://ec2-54-154-26-19.eu-west-1.compute.amazonaws.com:2375
 script:
   - docker build -t putanga .
+  - docker save putanga > /tmp/putanga.tar
+  - docker rmi putanga
+publish:
+  s3:
+    acl: public-read
+    region: eu-west-1
+    bucket: kukume-cf
+    access_key: {{AWSAccessKey}}
+    secret_key: {{AWSSecretKey}}
+    source: /tmp/putanga.tar
+    target: latest/
